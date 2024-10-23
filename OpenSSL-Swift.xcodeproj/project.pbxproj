@@ -466,7 +466,7 @@
 		42DEDCD437834BAC1F7DCDB2 /* pemerr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pemerr.h; sourceTree = "<group>"; };
 		4AA52181B396D9C5E203D17C /* encodererr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encodererr.h; sourceTree = "<group>"; };
 		4B0F12A9B4DD45D6E0468D0B /* httperr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = httperr.h; sourceTree = "<group>"; };
-		4F4A0B4BD5D0A3E2BB67A299 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		4B89D5772C6664F100704914 /* OpenSSL.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = OpenSSL.modulemap; sourceTree = "<group>"; };
 		504FC9F9CE92794360BB63A5 /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
 		51023CC05CD1F3420C145A57 /* ssl3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
 		52B0CD15E1145F98059880BE /* engineerr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engineerr.h; sourceTree = "<group>"; };
@@ -886,6 +886,7 @@
 		5934BFA296B9A5C7372048FF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4B89D5772C6664F100704914 /* OpenSSL.modulemap */,
 				766FD0CF6F3FC5584D0B2BD0 /* COpenSSL */,
 				122C3A33B7FD6B0F3AF6A0F5 /* OpenSSL */,
 			);
@@ -898,7 +899,6 @@
 				17A396B74E52742F2EFC7822 /* define_wrapper.c */,
 				386C32BC2AD279D909BAD3C8 /* define_wrapper.h */,
 				0AFD58B0693F03C5F8A38E11 /* shim.h */,
-				BC239CADFC125568E53188CC /* module */,
 			);
 			path = COpenSSL;
 			sourceTree = "<group>";
@@ -938,14 +938,6 @@
 				A087A57FEEB0E9744E496537 /* OpenSSLECGroup.swift */,
 			);
 			path = EC;
-			sourceTree = "<group>";
-		};
-		BC239CADFC125568E53188CC /* module */ = {
-			isa = PBXGroup;
-			children = (
-				4F4A0B4BD5D0A3E2BB67A299 /* module.modulemap */,
-			);
-			path = module;
 			sourceTree = "<group>";
 		};
 		C29837C66D2D61CB41B85A28 /* OpenSSLTests */ = {
@@ -1708,6 +1700,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MODULEMAP_FILE = Sources/OpenSSL.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.swift.openssl.OpenSSL-macOS";
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = macosx;
@@ -1809,6 +1802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = Sources/OpenSSL.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.swift.openssl.OpenSSL-iOS";
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = iphoneos;
@@ -1834,6 +1828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = Sources/OpenSSL.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.swift.openssl.OpenSSL-iOS";
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = iphoneos;
@@ -1911,6 +1906,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MODULEMAP_FILE = Sources/OpenSSL.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.swift.openssl.OpenSSL-macOS";
 				PRODUCT_NAME = OpenSSL;
 				SDKROOT = macosx;

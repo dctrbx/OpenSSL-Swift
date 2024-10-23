@@ -1,0 +1,8 @@
+framework module OpenSSL [system] {
+  
+  explicit module COpenSSL {
+      header "define_wrapper.h"
+      header "shim.h"
+  }
+  
+}

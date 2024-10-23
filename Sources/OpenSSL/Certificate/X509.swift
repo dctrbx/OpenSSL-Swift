@@ -17,7 +17,7 @@
 // See the Licence for the specific language governing permissions and limitations under the Licence.
 //
 
-@_implementationOnly import COpenSSL
+@_implementationOnly import OpenSSL.COpenSSL
 import Foundation
 
 /// X509 certificate
@@ -235,7 +235,7 @@ public class X509 {
     ///
     /// - Returns: `SignatureAlgorithm`
     public func signatureAlgorithm() -> SignatureAlgorithm {
-        let temp = X509_get_signature_nid(x509)
+        _ = X509_get_signature_nid(x509)
         switch X509_get_signature_nid(x509) {
         case NID_ecdsa_with_SHA256: return .ecdsaWithSHA256
         case NID_sha256WithRSAEncryption: return .sha256WithRsaEncryption

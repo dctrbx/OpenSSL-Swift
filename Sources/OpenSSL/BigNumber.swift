@@ -17,7 +17,7 @@
 // See the Licence for the specific language governing permissions and limitations under the Licence.
 //
 
-@_implementationOnly import COpenSSL
+@_implementationOnly import OpenSSL.COpenSSL
 import Foundation
 
 typealias BIGNUM = OpaquePointer
